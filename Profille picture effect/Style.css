@@ -29,3 +29,7 @@ img:hover{
         place-items:center ;
         background:black ;
     }
+    footer{
+        text-align: center;
+        color: #ffff;
+    }
