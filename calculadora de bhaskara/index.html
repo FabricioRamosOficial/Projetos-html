@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+      <title>Calculadora de Bhaskara</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Calculadora de Bhaskara</h1>
+	<div id="formularioBhaskara">
+    <form onsubmit="calcularBhaskara(); return false;">
+	<div id="elementos">
+      <label for="coeficiente-a" >Coeficiente a:</label>
+      <input type="number" id="coeficiente-a" name="coeficiente-a" required><br><br>
+      <label for="coeficiente-b">Coeficiente b:</label>
+      <input type="number" id="coeficiente-b" name="coeficiente-b" required><br><br>
+      <label for="coeficiente-c">Coeficiente c:</label>
+      <input type="number" id="coeficiente-c" name="coeficiente-c" required><br><br>
+      <button type="submit">Calcular</button>
+	  <div id="resultado"></div>
+	</div>
+	</div>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
