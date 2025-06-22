@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title data-pt="Portfólio de Conhecimentos Java" data-en="Java Knowledge Portfolio">Portfólio de Conhecimentos Java</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+
+    <header class="main-header">
+        <h1 data-pt="Portfólio de Conhecimentos" data-en="Knowledge Portfolio">Portfólio de Conhecimentos</h1>
+        <div class="header-controls">
+            <button id="play-pause-btn" class="control-btn" data-pt="▶️ Iniciar Apresentação" data-en="▶️ Start Presentation">▶️ Iniciar Apresentação</button>
+            <button id="reset-btn" class="control-btn" data-pt="🔄 Resetar" data-en="🔄 Reset">🔄 Resetar</button>
+            <button id="theme-toggle" class="control-btn" data-pt="☀️ Modo Claro" data-en="🌙 Dark Mode">☀️ Modo Claro</button> 
+            <button id="lang-toggle" data-pt="Switch to English" data-en="Mudar para Português">Switch to English</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p data-pt="Uma demonstração interativa de conhecimentos em Java. Utilizei um roadmap para guiar meus aprendizados, e nesse portifólio mostro o que ja aprendi. Use os controles no topo para iniciar uma apresentação automática ou explore manualmente."
+               data-en="An interactive demonstration of Java knowledge. I used a roadmap to guide my learning, and in this portfolio I show what I have learned so far. Use the controls at the top to start an automatic presentation or explore manually..">
+                Uma demonstração interativa de conhecimentos em Java utilizei um roadmap para guiar meus aprendizados, e nesse portifólio mostro o que ja aprendi. Use os controles no topo para iniciar uma apresentação automática ou explore manualmente.
+            </p>
+        </section>
+
+        <section id="basics" class="knowledge-section">
+            <h2 data-pt="Aprenda o Básico" data-en="Learn the Basics">Aprenda o Básico</h2>
+            <div class="knowledge-grid">
+                
+                <article class="knowledge-card">
+                    <h3 data-pt="Sintaxe Básica" data-en="Basic Syntax">Sintaxe Básica</h3>
+                    <p class="description" data-pt="A estrutura fundamental de um programa Java, incluindo a declaração de classe e o método main." data-en="The fundamental structure of a Java program, including the class declaration and the main method."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/getStarted/application/index.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">public class HelloWorld {
+    // O método main é o ponto de entrada do programa
+    public static void main(String[] args) {
+        System.out.println("Olá, Mundo!");
+    }
+}</code></pre>
+                    </details>
+                </article>
+
+                <article class="knowledge-card">
+                    <h3 data-pt="Ciclo de Vida de um Programa" data-en="Lifecycle of a Program">Ciclo de Vida de um Programa</h3>
+                    <p class="description" data-pt="Do código-fonte (.java) à compilação (.class) e execução (JVM)." data-en="From source code (.java) to compilation (.class) and execution (JVM)."></p>
+                    <a href="https://www.oracle.com/java/technologies/introduction-to-java.html#whatisjava" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Explicação" data-en="View Explanation">Ver Explicação</summary>
+                        <pre><code class="language-bash"># 1. Escrita do código-fonte
+#    Arquivo: MyProgram.java
+
+# 2. Compilação com o Java Compiler (javac)
+javac MyProgram.java
+#    Resultado: MyProgram.class (bytecode)
+
+# 3. Execução na Java Virtual Machine (JVM)
+java MyProgram
+#    A JVM interpreta o bytecode e executa o programa.</code></pre>
+                    </details>
+                </article>
+                
+                <article class="knowledge-card">
+                    <h3 data-pt="Tipos de Dados" data-en="Data Types">Tipos de Dados</h3>
+                    <p class="description" data-pt="Java possui tipos de dados primitivos (int, double, boolean) e tipos de referência (String, Objetos)." data-en="Java has primitive data types (int, double, boolean) and reference types (String, Objects)."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">public class DataTypesExample {
+    public static void main(String[] args) {
+        // Tipos Primitivos
+        int age = 30;
+        double price = 19.99;
+        char initial = 'J';
+        boolean isActive = true;
+
+        // Tipo de Referência
+        String name = "Java Developer";
+    }
+}</code></pre>
+                    </details>
+                </article>
+
+                <article class="knowledge-card">
+                    <h3 data-pt="Variáveis e Escopos" data-en="Variables and Scopes">Variáveis e Escopos</h3>
+                    <p class="description" data-pt="Onde as variáveis são acessíveis: escopo de classe (static), de instância e local (método)." data-en="Where variables are accessible: class scope (static), instance scope, and local scope (method)."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">public class ScopeExample {
+    static int classVar = 10; // Variável de classe
+    int instanceVar = 20;     // Variável de instância
+
+    public void myMethod() {
+        int localVar = 30; // Variável local
+        System.out.println("Acesso a todas: " + classVar + ", " + instanceVar + ", " + localVar);
+    }
+}</code></pre>
+                    </details>
+                </article>
+                
+                <article class="knowledge-card">
+                    <h3 data-pt="Type Casting" data-en="Type Casting">Type Casting</h3>
+                    <p class="description" data-pt="Conversão de um tipo de dado para outro, seja implícita (widening) ou explícita (narrowing)." data-en="Converting one data type to another, either implicitly (widening) or explicitly (narrowing)."></p>
+                    <a href="https://www.baeldung.com/java-type-casting" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">public class CastingExample {
+    public static void main(String[] args) {
+        // Widening Casting (automático)
+        int myInt = 9;
+        double myDouble = myInt; // int -> double
+
+        // Narrowing Casting (manual)
+        double anotherDouble = 9.78;
+        int anotherInt = (int) anotherDouble; // double -> int
+        
+        System.out.println(anotherInt); // Saída: 9
+    }
+}</code></pre>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+        <section id="oop" class="knowledge-section">
+            <h2 data-pt="Programação Orientada a Objetos" data-en="Object Oriented Programming">Programação Orientada a Objetos</h2>
+            <div class="knowledge-grid">
+                
+                   <article class="knowledge-card">
+                    <h3 data-pt="Básicos de OOP" data-en="Basics of OOP">Básicos de OOP</h3>
+                    <p class="description" data-pt="OOP se baseia em quatro pilares: Encapsulamento, Herança, Polimorfismo e Abstração." data-en="OOP is based on four pillars: Encapsulation, Inheritance, Polymorphism, and Abstraction."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/java/concepts/index.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Conceitos" data-en="View Concepts">Ver Conceitos</summary>
+                        <pre><code class="language-java">// Encapsulamento: Agrupar dados (atributos) e métodos que operam nesses dados.
+// Herança: Uma classe herda atributos e métodos de outra.
+// Polimorfismo: Objetos de diferentes classes respondem à mesma mensagem (método).
+// Abstração: Ocultar detalhes complexos e mostrar apenas a funcionalidade essencial.</code></pre>
+                    </details>
+                </article>
+
+                <article class="knowledge-card">
+                    <h3 data-pt="Classes e Objetos" data-en="Classes and Objects">Classes e Objetos</h3>
+                    <p class="description" data-pt="Classes são os 'moldes' e objetos são as 'instâncias' criadas a partir desses moldes." data-en="Classes are the 'blueprints' and objects are the 'instances' created from these blueprints."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">class Car {
+    String color; // Atributo
+
+    void startEngine() { // Método
+        System.out.println("Motor ligado!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car(); // Criando um objeto (instância)
+        myCar.color = "Vermelho";
+        myCar.startEngine();
+    }
+}</code></pre>
+                    </details>
+                </article>
+                
+                <article class="knowledge-card">
+                    <h3 data-pt="Atributos e Métodos" data-en="Attributes and Methods">Atributos e Métodos</h3>
+                    <p class="description" data-pt="Atributos (variáveis) definem o estado de um objeto, enquanto métodos (funções) definem seu comportamento." data-en="Attributes (variables) define the state of an object, while methods (functions) define its behavior."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/variables.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">class Dog {
+    // Atributo
+    String name;
+
+    // Construtor para inicializar o atributo
+    public Dog(String name) {
+        this.name = name;
+    }
+
+    // Método
+    public void bark() {
+        System.out.println(name + " diz: Woof!");
+    }
+}</code></pre>
+                    </details>
+                </article>
+
+                <article class="knowledge-card">
+                    <h3 data-pt="Modificadores de Acesso" data-en="Access Specifiers">Modificadores de Acesso</h3>
+                    <p class="description" data-pt="Controlam a visibilidade de classes, atributos e métodos (public, private, protected, default)." data-en="Control the visibility of classes, attributes, and methods (public, private, protected, default)."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">public class BankAccount {
+    public String ownerName; // Acessível de qualquer lugar
+    private double balance;  // Acessível apenas dentro da classe BankAccount
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            this.balance += amount; // Acesso ao campo privado
+        }
+    }
+}</code></pre>
+                    </details>
+                </article>
+                
+                <article class="knowledge-card">
+                    <h3 data-pt="Palavra-chave static" data-en="Static Keyword">Palavra-chave static</h3>
+                    <p class="description" data-pt="Define membros que pertencem à classe em si, não a uma instância específica." data-en="Defines members that belong to the class itself, not to a specific instance."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">class Thing {
+    public String name;
+    public static int count = 0; // Pertence à classe Thing
+
+    public Thing() {
+        count++; // Incrementa o contador a cada novo objeto
+    }
+}
+
+// Thing.count pode ser acessado sem criar um objeto Thing.</code></pre>
+                    </details>
+                </article>
+                
+                <article class="knowledge-card">
+                    <h3 data-pt="Palavra-chave final" data-en="Final Keyword">Palavra-chave final</h3>
+                    <p class="description" data-pt="Usada para criar constantes (variáveis), impedir a sobrescrita de métodos ou a herança de classes." data-en="Used to create constants (variables), prevent method overriding, or prevent class inheritance."></p>
+                    <a href="https://www.baeldung.com/java-final" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">class Constants {
+    // Variável final (constante)
+    public final double PI = 3.14159;
+
+    // Método final (não pode ser sobrescrito por subclasses)
+    public final void showInfo() {
+        System.out.println("Este método é final.");
+    }
+}
+
+// final class MyFinalClass {} // Esta classe não pode ser herdada</code></pre>
+                    </details>
+                </article>
+
+                <article class="knowledge-card">
+                    <h3 data-pt="Classes Aninhadas" data-en="Nested Classes">Classes Aninhadas</h3>
+                    <p class="description" data-pt="Uma classe declarada dentro de outra. Pode ser estática (Nested) ou não-estática (Inner)." data-en="A class declared within another class. Can be static (Nested) or non-static (Inner)."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">class OuterClass {
+    int x = 10;
+
+    // Classe aninhada não-estática (Inner Class)
+    class InnerClass {
+        int y = 5;
+        // Pode acessar membros da classe externa
+        int getOuterX() { return x; }
+    }
+
+    // Classe aninhada estática
+    static class StaticNestedClass {
+        int z = 20;
+    }
+}</code></pre>
+                    </details>
+                </article>
+
+                <article class="knowledge-card">
+                    <h3 data-pt="Pacotes" data-en="Packages">Pacotes</h3>
+                    <p class="description" data-pt="Usados para agrupar classes relacionadas e evitar conflitos de nomes. Correspondem à estrutura de diretórios." data-en="Used to group related classes and avoid naming conflicts. They correspond to the directory structure."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/java/package/index.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">// Arquivo: com/mycompany/app/Application.java
+package com.mycompany.app; // Declaração do pacote
+
+import java.util.ArrayList; // Importando uma classe de outro pacote
+
+public class Application {
+    // ...
+}</code></pre>
+                    </details>
+                </article>
+            </div>
+        </section>
+        
+        <section id="functional" class="knowledge-section">
+            <h2 data-pt="Programação Funcional" data-en="Functional Programming">Programação Funcional</h2>
+            <div class="knowledge-grid">
+
+                <article class="knowledge-card">
+                    <h3 data-pt="Interfaces Funcionais" data-en="Functional Interfaces">Interfaces Funcionais</h3>
+                    <p class="description" data-pt="Uma interface com apenas um método abstrato. É o alvo para expressões lambda e referências de método." data-en="An interface with only one abstract method. It's the target for lambda expressions and method references."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">@FunctionalInterface
+interface Greeter {
+    void sayHello(String name);
+}
+
+public class FunctionalInterfaceExample {
+    public static void main(String[] args) {
+        // Usando uma expressão lambda para implementar a interface
+        Greeter greeter = (name) -> System.out.println("Olá, " + name);
+        greeter.sayHello("Mundo");
+    }
+}</code></pre>
+                    </details>
+                </article>
+                
+                <article class="knowledge-card">
+                    <h3 data-pt="Stream API" data-en="Stream API">Stream API</h3>
+                    <p class="description" data-pt="Uma forma declarativa e funcional de processar coleções de dados em sequência." data-en="A declarative and functional way to process collections of data in a sequence."></p>
+                    <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">import java.util.Arrays;
+import java.util.List;
+
+public class StreamApiExample {
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("Ana", "Bob", "Carlos", "Bia");
+
+        names.stream()
+             .filter(name -> name.startsWith("B"))
+             .map(String::toUpperCase)
+             .sorted()
+             .forEach(System.out::println); // Saída: BIA, BOB
+    }
+}</code></pre>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+        <section id="web-frameworks" class="knowledge-section">
+            <h2 data-pt="Web Frameworks" data-en="Web Frameworks">Web Frameworks</h2>
+            <div class="knowledge-grid">
+                <article class="knowledge-card">
+                    <h3 data-pt="Spring Boot" data-en="Spring Boot">Spring Boot</h3>
+                    <p class="description" data-pt="Framework que simplifica a criação de aplicações Spring autônomas e prontas para produção, com configuração automática e servidor embutido." data-en="Framework that simplifies creating stand-alone, production-grade Spring applications with auto-configuration and an embedded server."></p>
+                    <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.Map;
+
+// A anotação principal que ativa a auto-configuração
+@SpringBootApplication
+public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+
+// Cria um controller REST
+@RestController
+class HelloController {
+
+    // Mapeia o endpoint /hello para o método
+    @GetMapping("/hello")
+    public Map<String, String> sayHello() {
+        // Retorna um JSON: {"message": "Olá, Mundo do Spring Boot!"}
+        return Map.of("message", "Olá, Mundo do Spring Boot!");
+    }
+}</code></pre>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+          <section id="concurrency-etc" class="knowledge-section">
+            <h2 data-pt="Tópicos Diversos" data-en="Miscellaneous Topics">Tópicos Diversos</h2>
+            <div class="knowledge-grid">
+                
+                <article class="knowledge-card">
+                    <h3 data-pt="Criptografia" data-en="Cryptography">Criptografia</h3>
+                    <p class="description" data-pt="Uso de APIs Java (JCA/JCE) para operações criptográficas como hashing e criptografia." data-en="Using Java APIs (JCA/JCE) for cryptographic operations like hashing and encryption."></p>
+                    <a href="https://docs.oracle.com/en/java/javase/17/docs/specs/security/standard-names.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">import java.security.MessageDigest;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
+public class EncryptionExample {
+    public static void main(String[] args) {
+        try {
+            String originalString = "MinhaSenhaSecreta";
+            
+            // Gerando um hash SHA-256
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hash = digest.digest(originalString.getBytes(StandardCharsets.UTF_8));
+            String encodedHash = Base64.getEncoder().encodeToString(hash);
+            
+            System.out.println("Hash SHA-256: " + encodedHash);
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+                        </code></pre>
+                    </details>
+                </article>
+
+                <article class="knowledge-card">
+                    <h3 data-pt="Concorrência (Threads)" data-en="Concurrency (Threads)">Concorrência (Threads)</h3>
+                    <p class="description" data-pt="Gerenciamento de múltiplas tarefas executando simultaneamente para melhorar o desempenho." data-en="Managing multiple tasks running concurrently to improve performance."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread executando: " + Thread.currentThread().getName());
+    }
+}
+
+public class ThreadExample {
+    public static void main(String[] args) {
+        Thread thread1 = new Thread(new MyRunnable(), "Minha-Thread-1");
+        Thread thread2 = new Thread(() -> System.out.println("Lambda Thread: " + Thread.currentThread().getName()), "Minha-Thread-2");
+        
+        thread1.start();
+        thread2.start();
+    }
+}</code></pre>
+                    </details>
+                </article>
+
+                <article class="knowledge-card">
+                    <h3 data-pt="Java NIO" data-en="Java NIO">Java NIO</h3>
+                    <p class="description" data-pt="API para operações de I/O de alta performance, utilizando buffers e canais para interagir com dados." data-en="API for high-performance I/O operations, using buffers and channels to interact with data."></p>
+                    <a href="https://docs.oracle.com/javase/tutorial/essential/io/nio.html" target="_blank" rel="noopener noreferrer" class="doc-link" data-pt="🔗 Ver Documentação" data-en="🔗 View Docs">🔗 Ver Documentação</a>
+                    <details>
+                        <summary data-pt="Ver Exemplo" data-en="View Example">Ver Exemplo</summary>
+                        <pre><code class="language-java">import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+
+public class NIOExample {
+    public static void main(String[] args) {
+        String data = "Hello, Java NIO!";
+        ByteBuffer buffer = ByteBuffer.wrap(data.getBytes());
+        
+        try (FileChannel channel = FileChannel.open(
+                Paths.get("nio_output.txt"), 
+                StandardOpenOption.CREATE, 
+                StandardOpenOption.WRITE)) {
+            
+            channel.write(buffer);
+            System.out.println("Dados escritos usando NIO.");
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                    </details>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p data-pt="&copy; 2025 Portfólio de Conhecimentos Java. Desenvolvido por <a href='https://github.com/FabricioRamosOficial' target='_blank' rel='noopener noreferrer'>Fabricio Ramos Coelho</a>. Todos os direitos reservados." 
+   data-en="&copy; 2025 Java Knowledge Portfolio. Developed by <a href='https://github.com/FabricioRamosOficial' target='_blank' rel='noopener noreferrer'>Fabricio Ramos Coelho</a>. All rights reserved."></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+
+</body>
+</html>

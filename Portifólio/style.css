@@ -1,0 +1,409 @@
+/* style.css */
+
+/* --- Estilos Gerais (Aplicados por padrão - Modo Escuro) --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #282c34; /* Fundo padrão escuro */
+    color: #abb2bf; /* Cor do texto padrão (claro para fundo escuro) */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+/* Container principal para centralizar o conteúdo e limitar a largura */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho principal */
+.main-header {
+    background-color: #21252b; /* Fundo do cabeçalho escuro */
+    color: #ffffff; /* Texto do cabeçalho branco */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #4a4a4a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os itens */
+}
+
+.main-header h1 {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.header-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Centraliza os botões em telas menores */
+    margin-top: 10px; /* Espaçamento para o título em telas menores */
+}
+
+@media (min-width: 768px) {
+    .header-controls {
+        margin-top: 0; /* Remove o espaçamento em telas maiores */
+    }
+}
+
+.control-btn {
+    background-color: #61afef; /* Azul claro para botões de controle */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-family: 'Roboto Mono', monospace;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.control-btn:hover {
+    background-color: #529fdb; /* Azul um pouco mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+/* Seção de introdução */
+.intro {
+    background-color: #323842;
+    color: #cccccc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.intro p {
+    font-size: 1.1em;
+}
+
+/* Seções de conhecimento */
+.knowledge-section {
+    margin-bottom: 40px;
+}
+
+.knowledge-section h2 {
+    color: #61afef; /* Cor do título da seção */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-family: 'Roboto Mono', monospace;
+    border-bottom: 2px solid #61afef;
+    padding-bottom: 10px;
+    display: inline-block; /* Ajuste para a linha ser apenas no tamanho do texto */
+    width: auto; /* A linha se ajusta ao conteúdo */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Para centralizar o block inline */
+}
+
+.knowledge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.knowledge-card {
+    background-color: #21252b; /* Fundo dos cards escuro */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, border 0.3s ease;
+    border: 1px solid #3a3f4a; /* Borda sutil */
+}
+
+.knowledge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.knowledge-card h3 {
+    color: #e5c07b; /* Título do card em amarelo */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.knowledge-card p.description {
+    color: #c6c6c6; /* Descrição mais clara */
+    font-size: 0.95em;
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço restante */
+    margin-bottom: 15px;
+}
+
+.knowledge-card .doc-link {
+    display: inline-block;
+    background-color: #61afef; /* Fundo azul para o link de documentação */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-top: 10px; /* Garante espaçamento */
+    align-self: flex-start; /* Alinha o link ao início do card */
+    transition: background-color 0.3s ease;
+}
+
+.knowledge-card .doc-link:hover {
+    background-color: #529fdb;
+}
+
+/* Detalhes (exemplo de código) */
+details {
+    background-color: #3e4451; /* Fundo escuro para detalhes */
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #c678dd; /* Cor do texto do summary (roxo) */
+    outline: none;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+summary:hover {
+    color: #b25dbd;
+}
+
+pre {
+    background-color: #1e1e1e; /* Fundo do bloco de código */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto; /* Adiciona scroll se o código for muito longo */
+    margin-top: 10px;
+    border: 1px solid #3a3f4a;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+pre code {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #abb2bf; /* Cor do texto do código (claro) */
+}
+
+/* Rodapé */
+.main-footer {
+    background-color: #21252b; /* Fundo do rodapé escuro */
+    color: #666; /* Texto do rodapé em cinza mais escuro */
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #4a4a4a;
+    margin-top: 40px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.main-footer a {
+    color: #61afef; /* Cor do link no rodapé */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer a:hover {
+    color: #529fdb;
+    text-decoration: underline;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+    .knowledge-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+    .main-header h1 {
+        font-size: 1.5em;
+    }
+    .control-btn {
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+    .knowledge-card {
+        padding: 20px;
+    }
+    .knowledge-card h3 {
+        font-size: 1.3em;
+    }
+}
+
+/* --- Prism.js Theme Overrides (para o tema escuro padrão) --- */
+/* Certifique-se de que estes estilos padrão Prism.js estão presentes ou vêm antes das substituições do light-mode */
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: #5c6370; }
+.token.punctuation { color: #abb2bf; }
+.token.selector, .token.tag { color: #e06c75; }
+.token.atrule, .token.attr-value, .token.keyword { color: #c678dd; }
+.token.string, .token.url { color: #98c379; }
+.token.property, .token.constant, .token.symbol { color: #d19a66; }
+.token.operator { color: #56b6c2; }
+.token.function { color: #61afef; }
+.token.attr-name, .token.class-name { color: #e5c07b; }
+
+
+/* ========================================= */
+/* --- MODO CLARO: REGRAS ESPECÍFICAS --- */
+/* ========================================= */
+/* Estas regras DEVEM vir DEPOIS de todas as suas regras de modo escuro padrão. */
+
+body.light-mode {
+    background-color: #f0f2f5; /* Fundo claro */
+    color: #333; /* Texto escuro */
+}
+
+body.light-mode .main-header,
+body.light-mode .main-footer {
+    background-color: #ffffff; /* Fundo branco para cabeçalho e rodapé */
+    color: #333; /* Texto escuro */
+    border-bottom: 1px solid #ddd; /* Linha sutil */
+    border-top: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra mais suave */
+}
+
+body.light-mode .main-header h1 {
+    color: #2c3e50; /* Cor do título do cabeçalho */
+}
+
+body.light-mode .knowledge-section h2 {
+    color: #007bff; /* Títulos de seção em azul */
+    border-bottom-color: #007bff; /* Borda do título em azul */
+}
+
+body.light-mode .intro {
+    background-color: #ffffff; /* Fundo branco para a introdução */
+    color: #555; /* Texto mais escuro */
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .knowledge-card {
+    background-color: #ffffff; /* Fundo branco para os cards */
+    border: 1px solid #e0e0e0; /* Borda mais clara */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra mais suave */
+}
+
+body.light-mode .knowledge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .knowledge-card h3 {
+    color: #0056b3; /* Títulos dos cards em azul escuro */
+}
+
+body.light-mode .knowledge-card p.description {
+    color: #555; /* Descrição mais escura */
+}
+
+body.light-mode .doc-link {
+    background-color: #007bff; /* Fundo azul para o link de doc */
+    color: #fff; /* Texto branco */
+}
+
+body.light-mode .doc-link:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+body.light-mode details {
+    background-color: #f8f8f8; /* Fundo mais claro para os detalhes */
+    border: 1px solid #eee; /* Borda clara */
+}
+
+body.light-mode summary {
+    color: #007bff; /* Texto do summary em azul */
+}
+
+body.light-mode summary:hover {
+    color: #0056b3;
+}
+
+body.light-mode pre {
+    background-color: #e9ecef; /* Fundo claro para blocos de código */
+    border: 1px solid #dee2e6; /* Borda clara */
+    color: #212529; /* Texto escuro para o código */
+}
+
+body.light-mode pre code {
+    color: #212529; /* Certifica que o texto do código é escuro */
+}
+
+body.light-mode .control-btn {
+    background-color: #6c757d; /* Botões de controle em cinza */
+    color: #fff;
+}
+
+body.light-mode .control-btn:hover {
+    background-color: #5a6268; /* Cinza mais escuro no hover */
+}
+
+body.light-mode .main-footer a {
+    color: #007bff; /* Link do rodapé em azul */
+}
+
+body.light-mode .main-footer a:hover {
+    color: #0056b3;
+}
+
+
+/* --- Prism.js Theme Adjustments for Light Mode (sobrepõe o tema escuro do Prism.js) --- */
+body.light-mode .token.comment,
+body.light-mode .token.prolog,
+body.light-mode .token.doctype,
+body.light-mode .token.cdata {
+    color: #6a737d; /* Comentários mais claros */
+}
+
+body.light-mode .token.punctuation {
+    color: #24292e; /* Pontuação mais escura */
+}
+
+body.light-mode .token.selector,
+body.light-mode .token.tag {
+    color: #6f42c1; /* Roxo para tags/seletores */
+}
+
+body.light-mode .token.atrule,
+body.light-mode .token.attr-value,
+body.light-mode .token.keyword {
+    color: #d73a49; /* Vermelho para palavras-chave */
+}
+
+body.light-mode .token.string,
+body.light-mode .token.url {
+    color: #032f62; /* Azul escuro para strings/urls */
+}
+
+body.light-mode .token.property,
+body.light-mode .token.constant,
+body.light-mode .token.symbol {
+    color: #e36209; /* Laranja para propriedades/constantes */
+}
+
+body.light-mode .token.operator {
+    color: #005cc5; /* Azul para operadores */
+}
+
+body.light-mode .token.function {
+    color: #6f42c1; /* Roxo para funções */
+}
+
+body.light-mode .token.attr-name,
+body.light-mode .token.class-name {
+    color: #e36209; /* Laranja para nomes de atributos/classes */
+}
