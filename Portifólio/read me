@@ -1,0 +1,21 @@
+Início formal do projeto "Portfólio de Conhecimentos Java". Este repositório serve como uma plataforma interativa para solidificar e apresentar minhas habilidades e conhecimentos em Java de forma organizada e prática.
+
+A motivação por trás deste portfólio é dupla:
+1. **Aprendizado Ativo:** Ter um espaço onde eu possa constantemente adicionar, revisar e entender conceitos complexos de Java através de exemplos práticos.
+2. **Demonstração de Habilidades:** Oferecer a recrutadores e colegas um panorama claro e interativo das minhas competências em Java, desde os fundamentos até tópicos mais avançados e frameworks.
+
+O que foi incluído neste commit inicial:
+- **Estrutura Base:** HTML semântico e CSS estilizado para uma experiência de usuário agradável e responsiva.
+- **Tópicos Abrangentes:** Organização de conteúdo em categorias como:
+    - Fundamentos de Java (sintaxe, tipos de dados, variáveis)
+    - Programação Orientada a Objetos (classes, objetos, atributos, métodos, modificadores, estáticos, finais, aninhados, pacotes)
+    - Programação Funcional (Interfaces Funcionais, Stream API)
+    - Web Frameworks (Spring Boot)
+    - Tópicos Diversos (Criptografia, Concorrência, NIO)
+- **Recursos Interativos:**
+    - Botões para iniciar/pausar/resetar uma apresentação de slides.
+    - Alternância de idioma (Português/Inglês) para atender a diferentes públicos.
+    - Implementação de um "Modo Claro" opcional, permitindo ao usuário alternar o tema visual e salvando sua preferência para futuras visitas.
+- **Código e Documentação:** Cada tópico possui um exemplo de código com destaque de sintaxe (via Prism.js) e um link direto para a documentação oficial da Oracle/Spring/Baeldung, facilitando a aprofundamento.
+
+Estou animado para continuar expandindo este portfólio e explorar ainda mais o ecossistema Java!
